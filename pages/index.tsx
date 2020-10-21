@@ -1,3 +1,4 @@
+import { Menu } from "../components/Menu";
 import { Sideshow } from "../components/Sideshow";
 import styles from "../styles/Home.module.scss";
 
@@ -5,7 +6,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.siteContainer}>
-        <div className={styles.sliderContainer}>Slider Place</div>
+        <div className={styles.sliderContainer}>
+          <Menu />
+        </div>
         <div className={styles.aboutContainer}>
           <img src="images/image-about-dark.jpg" alt="Nice furniture" />
           <div className={styles.aboutTextBox}>
