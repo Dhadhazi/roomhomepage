@@ -12,6 +12,7 @@
   .textContainer {
     flex: 2;
     background-color: white;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,13 +31,31 @@
         color: $darkgray;
         line-height: 18px;
       }
-      div {
+      a {
         margin-top: 30px;
         font-size: 14px;
         letter-spacing: 8px;
         &:hover {
           cursor: pointer;
-          color: $darkgray;
+          opacity: 0.8;
+        }
+      }
+    }
+    .arrowsContainer {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      display: flex;
+      .arrowBox {
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
         }
       }
     }

@@ -7,15 +7,24 @@ export const Sideshow = () => {
     <div className={styles.container}>
       <div
         className={styles.imageContainer}
-        style={{ backgroundImage: `url(${SLIDES[0]})` }}
+        style={{ backgroundImage: `url(${SLIDES[0].image})` }}
       ></div>
       <div className={styles.textContainer}>
         <div className={styles.textBox}>
           <h1>{SLIDES[0].title}</h1>
           <article>{SLIDES[0].description}</article>
-          <div>
+
+          <a>
             SHOP NOW &nbsp; &nbsp;
             <img src="./icon-arrow.svg" alt="Shop Now Arrow" />
+          </a>
+        </div>
+        <div className={styles.arrowsContainer}>
+          <div className={styles.arrowBox}>
+            <img src="./icon-angle-left.svg" alt="Previous Slide" />
+          </div>
+          <div className={styles.arrowBox}>
+            <img src="./icon-angle-right.svg" alt="Next Slide" />
           </div>
         </div>
       </div>
