@@ -1,14 +1,44 @@
-.eachSlide > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 350px;
-}
+@import "_variables";
 
-.eachSlide span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  .imageContainer {
+    flex: 3;
+    max-width: 840px;
+  }
+  .textContainer {
+    flex: 2;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .textBox {
+      width: 400px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h1 {
+        font-weight: 600;
+        font-size: 36px;
+      }
+      article {
+        font-weight: 500;
+        color: $darkgray;
+        line-height: 18px;
+      }
+      div {
+        margin-top: 30px;
+        font-size: 14px;
+        letter-spacing: 8px;
+        &:hover {
+          cursor: pointer;
+          color: $darkgray;
+        }
+      }
+    }
+  }
 }

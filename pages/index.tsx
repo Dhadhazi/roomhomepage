@@ -8,6 +8,7 @@ export default function Home() {
       <div className={styles.siteContainer}>
         <div className={styles.sliderContainer}>
           <Menu />
+          <Sideshow />
         </div>
         <div className={styles.aboutContainer}>
           <img src="images/image-about-dark.jpg" alt="Nice furniture" />
