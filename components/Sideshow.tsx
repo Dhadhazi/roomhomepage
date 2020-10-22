@@ -37,7 +37,7 @@ export const Sideshow = () => {
       <div className={styles.textContainer}>
         <div className={styles.textBox}>
           <h1>{SLIDES[slide].title}</h1>
-          <article>{SLIDES[slide].description}</article>
+          <div>{SLIDES[slide].description}</div>
           <a>
             SHOP NOW &nbsp; &nbsp;
             <img src="./icon-arrow.svg" alt="Shop Now Arrow" />

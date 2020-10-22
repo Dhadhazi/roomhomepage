@@ -15,7 +15,7 @@ export const Menu = () => {
   if (width > 870) {
     return (
       <div className={styles.container}>
-        <img src="./logo.svg" />
+        <img src="./logo.svg" alt="room logo" />
 
         <div className={styles.menuItems}>
           {MENU.map((title, index) => (
@@ -27,7 +27,7 @@ export const Menu = () => {
   }
   return (
     <div className={styles.container}>
-      <img src="./logo.svg" />
+      <img src="./logo.svg" alt="room logo" />
       {open ? (
         <div className={styles.menuOpen}>
           <button onClick={() => setOpen(false)}>
