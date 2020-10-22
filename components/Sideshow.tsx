@@ -1,31 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Sideshow.module.scss";
 import { SLIDES } from "../content";
 
 export const Sideshow = () => {
+  const [slide, setSlide] = useState<number>(1);
+  const lastSlide = SLIDES.length - 1;
+
+  function nextSlide() {
+    setSlide((currentSlide) => {
+      return currentSlide === lastSlide ? 0 : currentSlide + 1;
+    });
+  }
+
+  function prevSlide() {
+    setSlide((currentSlide) => {
+      return currentSlide === 0 ? lastSlide : currentSlide - 1;
+    });
+  }
+
   return (
     <div className={styles.container}>
       <div
         className={styles.imageContainer}
-        style={{ backgroundImage: `url(${SLIDES[0].image})` }}
+        style={{ backgroundImage: `url(${SLIDES[slide].image})` }}
       ></div>
       <div className={styles.textContainer}>
         <div className={styles.textBox}>
-          <h1>{SLIDES[0].title}</h1>
-          <article>{SLIDES[0].description}</article>
-
+          <h1>{SLIDES[slide].title}</h1>
+          <article>{SLIDES[slide].description}</article>
           <a>
             SHOP NOW &nbsp; &nbsp;
             <img src="./icon-arrow.svg" alt="Shop Now Arrow" />
           </a>
         </div>
         <div className={styles.arrowsContainer}>
-          <div className={styles.arrowBox}>
+          <button className={styles.arrowButton} onClick={() => prevSlide()}>
             <img src="./icon-angle-left.svg" alt="Previous Slide" />
-          </div>
-          <div className={styles.arrowBox}>
+          </button>
+          <button className={styles.arrowButton} onClick={() => nextSlide()}>
             <img src="./icon-angle-right.svg" alt="Next Slide" />
-          </div>
+          </button>
         </div>
       </div>
     </div>

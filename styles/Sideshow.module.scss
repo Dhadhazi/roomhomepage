@@ -8,6 +8,7 @@
   .imageContainer {
     flex: 3;
     max-width: 840px;
+    transition-duration: 1s;
   }
   .textContainer {
     flex: 2;
@@ -22,6 +23,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       h1 {
         font-weight: 600;
         font-size: 36px;
@@ -41,18 +43,21 @@
         }
       }
     }
+
     .arrowsContainer {
       position: absolute;
       bottom: 0px;
       left: 0;
       display: flex;
-      .arrowBox {
+      .arrowButton {
         width: 80px;
         height: 80px;
         background-color: black;
         display: flex;
         justify-content: center;
         align-items: center;
+        outline: none;
+        border: none;
         &:hover {
           cursor: pointer;
           opacity: 0.8;
