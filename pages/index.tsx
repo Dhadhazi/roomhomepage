@@ -11,7 +11,11 @@ export default function Home() {
           <Sideshow />
         </div>
         <div className={styles.aboutContainer}>
-          <img src="images/image-about-dark.jpg" alt="Nice furniture" />
+          <img
+            src="images/image-about-dark.jpg"
+            alt="Nice furniture"
+            className={styles.lightImage}
+          />
           <div className={styles.aboutTextBox}>
             <article className={styles.aboutText}>
               <h2>ABOUT OUR FURNITURE</h2>

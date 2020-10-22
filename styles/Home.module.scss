@@ -7,6 +7,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 870px) {
+    justify-content: flex-start;
+  }
 }
 
 .siteContainer {
@@ -31,6 +34,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .aboutText {
       margin: 45px;
       h2 {
@@ -44,5 +48,14 @@
         line-height: 18px;
       }
     }
+  }
+  @media (min-width: 871px) and (max-width: 1145px) {
+    .lightImage {
+      display: none;
+    }
+  }
+  @media (max-width: 870px) {
+    flex-direction: column;
+    max-width: 375px;
   }
 }

@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Sideshow.module.scss";
 import { SLIDES } from "../content";
 
 export const Sideshow = () => {
   const [slide, setSlide] = useState<number>(1);
+  const [width, setWidth] = useState<number>();
   const lastSlide = SLIDES.length - 1;
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   function nextSlide() {
     setSlide((currentSlide) => {
@@ -22,7 +27,12 @@ export const Sideshow = () => {
     <div className={styles.container}>
       <div
         className={styles.imageContainer}
-        style={{ backgroundImage: `url(${SLIDES[slide].image})` }}
+        style={{
+          backgroundImage:
+            width > 870
+              ? `url(${SLIDES[slide].image})`
+              : `url(${SLIDES[slide].imageMobile})`,
+        }}
       ></div>
       <div className={styles.textContainer}>
         <div className={styles.textBox}>
