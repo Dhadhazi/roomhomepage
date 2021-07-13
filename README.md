@@ -1,5 +1,5 @@
 ## Room Homepage
-Your challenge is to build out this e-commerce homepage and get it looking as close to the design as possible.
+The challenge was to build out this e-commerce homepage and get it looking as close to the design as possible.
 
 Try it out: [https://roomhomepage.vercel.app/](https://roomhomepage.vercel.app/)
 
